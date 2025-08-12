@@ -2,7 +2,7 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import { Routes, Route } from 'react-router'
 import Home from "./pages/Home/Home"
-import Cart from "./pages/Cart/Cart";
+import Cart from "./pages/cart/Cart";
 import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import Footer from './components/Footer/Footer';
 import { useState } from 'react';
