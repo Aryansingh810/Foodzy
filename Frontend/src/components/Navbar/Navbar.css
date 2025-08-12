@@ -1,0 +1,264 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5vw;
+  background-color: #ffccff;
+  top: 0;
+  z-index: 9999; 
+}
+
+.logo-h {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #49557e;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 100px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-left: 40px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #49557e;
+  font-weight: 500;
+}
+
+.navbar-menu a.active {
+  border-bottom: 2px solid #49557e;
+  padding-bottom: 2px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10000; /* Ensures dropdown comes over hero section */
+}
+
+.navbar-right img,
+.icon {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.navbar-icon-wrapper {
+  position: relative;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+
+}
+
+.navbar-right button {
+  background: transparent;
+  font-size: 16px;
+  color: #49557e;
+  border: 1px solid grey;
+  padding: 10px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.navbar-right button:hover {
+  background-color: #ddc8c481;
+}
+
+   .navbar-profile {
+  position: relative;
+}
+
+.nav-profile-dropdown {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 140px;
+  flex-direction: column;
+  padding: 8px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 99999;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.nav-profile-dropdown.visible {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.nav-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-profile-dropdown li:hover {
+  background-color: #f8f8f8;
+}
+
+.nav-profile-dropdown p {
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .logo-h {
+    font-size: 28px;
+  }
+
+  .logo {
+    width: 45px;
+  }
+
+  .navbar-center {
+    justify-content: flex-end;
+    gap: 10px;
+    flex-grow: 0;
+  }
+
+  .navbar-right {
+    gap: 16px;
+  }
+}
+
+/* Mobile L (600px and down) */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px 15px;
+    flex-wrap: nowrap;
+  }
+
+  .logo-h {
+    font-size: 22px;
+    gap: 8px;
+    margin-right: 15px;
+  }
+
+  .logo {
+    width: 36px;
+    height: auto;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+
+  .navbar-right img {
+    width: 20px;
+  }
+
+  .navbar button {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .navabar-search-icon .dot {
+    top: -6px;
+    right: -6px;
+  }
+}
+
+/* Mobile M - S (375px and below) */
+@media (max-width: 375px) {
+  .navbar {
+    padding: 8px 10px;
+  }
+
+  .logo-h {
+    font-size: 18px;
+    gap: 5px;
+    margin-right: 10px;
+  }
+
+  .logo {
+    width: 30px;
+  }
+
+  .navbar-right {
+    gap: 8px;
+  }
+
+  .navbar-right img {
+    width: 18px;
+  }
+
+  .navbar button {
+    padding: 4px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .navabar-search-icon .dot {
+    top: -5px;
+    right: -5px;
+  }
+}
+
+/* Extra Small Devices (≤320px like iPhone SE) */
+@media (max-width: 320px) {
+  .logo-h {
+    font-size: 16px;
+    gap: 4px;
+  }
+
+  .logo {
+    width: 26px;
+  }
+
+  .navbar-right {
+    gap: 6px;
+  }
+
+  .navbar button {
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+
+  .navbar-right img {
+    width: 16px;
+  }
+
+  .navabar-search-icon .dot {
+    top: -4px;
+    right: -4px;
+  }
+}

@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5vw;
+  background-color: #c9c9c9;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  border:none;
+  box-shadow: none;
+  outline:none;
+ 
+}
+
+.logo-h {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #49557e;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 100px;
+}
