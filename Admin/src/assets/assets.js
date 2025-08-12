@@ -16,4 +16,4 @@ export const assets ={
     logos
 }
 
-export const url = 'http://localhost:4000'
+export const url = 'https://foodzy-backend-40t3.onrender.com'
