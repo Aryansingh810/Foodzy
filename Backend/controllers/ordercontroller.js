@@ -5,7 +5,7 @@ import Stripe from "stripe";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const placeorder = async (req, res) => {
-  const frontend_url = "http://localhost:5173";
+  const frontend_url = "https://foodzy-front.onrender.com";
 
   try {
     const { userId, items, amount, address, paymentMethod } = req.body;
